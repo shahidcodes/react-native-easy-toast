@@ -12,12 +12,13 @@ import {
     View,
     Animated,
     Dimensions,
-    Text,
-    ViewPropTypes as RNViewPropTypes,
+    Text
 } from 'react-native'
 
 import PropTypes from 'prop-types';
-const ViewPropTypes = RNViewPropTypes || View.propTypes;
+const ViewPropTypes = PropTypes.shape({
+  style: PropTypes.any,
+});
 export const DURATION = { 
     LENGTH_SHORT: 500,
     FOREVER: 0,
